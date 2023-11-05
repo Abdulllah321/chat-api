@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "Mern-chat",
+  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
+}
