@@ -10,6 +10,7 @@ const fs = require("fs");
 const User = require("./models/User");
 const Message = require("./models/Message");
 const ws = require("ws");
+const path = require("path")
 
 dotenv.config();
 
@@ -32,6 +33,7 @@ app.use(
     origin: process.env.CLIENT_URL,
   })
 );
+app.use(express.static(path.join(__dirname, "dist")));
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
 // Multer setup for file uploads
