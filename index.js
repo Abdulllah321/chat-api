@@ -22,7 +22,8 @@ mongoose
 const jwtSecret = process.env.JWT_SECRET;
 const bcryptSalt = bcrypt.genSaltSync(10);
 
-const app = express();
+const app = express(); 
+
 
 // Middleware setup
 app.use(express.json());
